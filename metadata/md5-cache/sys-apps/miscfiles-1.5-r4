@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install postinst prepare
+DESCRIPTION=Miscellaneous files
+EAPI=6
+HOMEPAGE=https://savannah.gnu.org/projects/miscfiles/
+IUSE=minimal
+KEYWORDS=*
+LICENSE=GPL-2 unicode
+RDEPEND=!<sys-freebsd/freebsd-share-7.2-r1
+SLOT=0
+SRC_URI=https://ftp.gnu.org/gnu/miscfiles/miscfiles-1.5.tar.gz -> miscfiles-1.5.tar.gz https://distfiles.gentoo.org/distfiles/0b/UnicodeData-10.0.0.txt.xz -> UnicodeData-10.0.0.txt.xz
+_md5_=344967f798a7ec72900fcab5b62dc609
