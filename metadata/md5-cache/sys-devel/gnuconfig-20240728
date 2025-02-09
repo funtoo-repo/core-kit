@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Updated config.sub and config.guess file from GNU
+EAPI=7
+HOMEPAGE=https://savannah.gnu.org/projects/config
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://distfiles.gentoo.org/distfiles/f9/gnuconfig-20240728.tar.xz -> gnuconfig-20240728.tar.xz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8
+_md5_=9a4f401d88b690d1b335079accbf9c87

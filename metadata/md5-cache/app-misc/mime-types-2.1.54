@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=Provides /etc/mime.types file
+EAPI=7
+HOMEPAGE=https://pagure.io/mailcap
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://releases.pagure.org/mailcap/mailcap-2.1.54.tar.xz -> mailcap-2.1.54.tar.xz
+_md5_=20370fd82bb448c345d4e76a07497bbc
