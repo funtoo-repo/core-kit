@@ -12,6 +12,12 @@ SLOT="0"
 KEYWORDS="*"
 IUSE=""
 
+# to prevent file collisions sys-apps/man-pages should go first
+# and do not install man3/crypt files as libxcrypt will install them
+DEPEND="
+   sys-apps/man-pages
+"
+
 S="${WORKDIR}/besser82-libxcrypt-55ea777"
 
 src_configure() {

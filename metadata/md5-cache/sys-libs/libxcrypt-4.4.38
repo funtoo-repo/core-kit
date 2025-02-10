@@ -1,4 +1,5 @@
 DEFINED_PHASES=configure install
+DEPEND=sys-apps/man-pages
 DESCRIPTION=A replacement for libcrypt with DES, MD5 and blowfish support
 EAPI=5
 HOMEPAGE=https://github.com/besser82/libxcrypt
@@ -7,4 +8,4 @@ LICENSE=LGPL-2
 SLOT=0
 SRC_URI=https://github.com/besser82/libxcrypt/tarball/55ea777e8d567e5e86ffac917c28815ac54cc341 -> libxcrypt-4.4.38-55ea777.tar.gz
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=bc70a6c5cf2aa61069e71691c1dd4653
+_md5_=5d6dc85fd039a3c483e3e271a1cc6e9a
