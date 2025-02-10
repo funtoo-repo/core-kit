@@ -9,5 +9,5 @@ PDEPEND=l10n_de? ( app-i18n/man-pages-l10n[l10n_de(-)] ) l10n_es? ( app-i18n/man
 RDEPEND=virtual/man !<sys-apps/keyutils-1.5.9-r4 !<dev-libs/libbsd-0.8.3-r1
 RESTRICT=binchecks
 SLOT=0
-SRC_URI=https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.9.tar.xz -> man-pages-6.9.tar.xz
-_md5_=077083e1f62f1794ae8b4cd08e188d17
+SRC_URI=https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.10.tar.xz -> man-pages-6.10.tar.xz
+_md5_=9a1a8b3d959ad85e5e3882e85b874481

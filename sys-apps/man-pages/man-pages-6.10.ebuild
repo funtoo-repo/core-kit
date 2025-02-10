@@ -5,7 +5,7 @@ EAPI=7
 UNI_PV="10.0.0"
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
 HOMEPAGE="https://www.kernel.org/doc/man-pages/"
-SRC_URI="https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.9.tar.xz -> man-pages-6.9.tar.xz"
+SRC_URI="https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.10.tar.xz -> man-pages-6.10.tar.xz"
 
 LICENSE="man-pages GPL-2+ BSD"
 SLOT="0"
@@ -34,6 +34,9 @@ PDEPEND="
 	l10n_zh-CN? ( app-i18n/man-pages-zh_CN )
 	sys-apps/man-pages-posix
 "
+PATCHES=(
+	"${FILESDIR}"/"${PN}-6.10-escape-sharp-in-regex.patch"
+)
 
 src_prepare() {
 	default
