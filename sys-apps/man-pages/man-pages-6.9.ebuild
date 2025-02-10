@@ -1,20 +1,15 @@
-# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-GENTOO_PATCH=2
-
+UNI_PV="10.0.0"
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
 HOMEPAGE="https://www.kernel.org/doc/man-pages/"
-SRC_URI="https://www.kernel.org/pub/linux/docs/man-pages/Archive/${P}.tar.xz
-	https://www.kernel.org/pub/linux/docs/man-pages/${P}.tar.xz
-	mirror://gentoo/man-pages-gentoo-${GENTOO_PATCH}.tar.bz2
-	https://dev.gentoo.org/~cardoe/files/man-pages-gentoo-${GENTOO_PATCH}.tar.bz2"
+SRC_URI="https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.9.tar.xz -> man-pages-6.9.tar.xz"
 
 LICENSE="man-pages GPL-2+ BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="*"
 IUSE_L10N=" de es fr it ja nl pl pt-BR ro ru zh-CN"
 IUSE="${IUSE_L10N// / l10n_}"
 RESTRICT="binchecks"
@@ -45,6 +40,8 @@ src_prepare() {
 
 	# passwd.5 installed by sys-apps/shadow #776787
 	rm man5/passwd.5 || die
+    # crypt installed by sys-libs/libxcrypt
+	rm man3/crypt{,_r}.3 || die
 }
 
 src_configure() { :; }
@@ -53,10 +50,5 @@ src_compile() { :; }
 
 src_install() {
 	emake install prefix="${EPREFIX}/usr" DESTDIR="${D}"
-	dodoc man-pages-*.Announce README Changes*
-
-	# Override with Gentoo specific or additional Gentoo pages
-	cd "${WORKDIR}"/man-pages-gentoo || die
-	doman */*
-	dodoc README.Gentoo
+	dodoc README Changes*
 }
