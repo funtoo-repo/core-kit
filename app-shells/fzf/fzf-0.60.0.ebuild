@@ -64,8 +64,9 @@ EGO_SUM=(
 	"golang.org/x/sys v0.12.0/go.mod"
 	"golang.org/x/sys v0.17.0/go.mod"
 	"golang.org/x/sys v0.20.0/go.mod"
-	"golang.org/x/sys v0.29.0"
 	"golang.org/x/sys v0.29.0/go.mod"
+	"golang.org/x/sys v0.30.0"
+	"golang.org/x/sys v0.30.0/go.mod"
 	"golang.org/x/telemetry v0.0.0-20240228155512-f48c80bd79b2/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
@@ -74,8 +75,9 @@ EGO_SUM=(
 	"golang.org/x/term v0.12.0/go.mod"
 	"golang.org/x/term v0.17.0/go.mod"
 	"golang.org/x/term v0.20.0/go.mod"
-	"golang.org/x/term v0.28.0"
 	"golang.org/x/term v0.28.0/go.mod"
+	"golang.org/x/term v0.29.0"
+	"golang.org/x/term v0.29.0/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
 	"golang.org/x/text v0.3.3/go.mod"
 	"golang.org/x/text v0.3.7/go.mod"
@@ -97,8 +99,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/junegunn/fzf/tarball/a9a1c5f38b5ef50f26f0edc53e0005c87a502c05 -> fzf-0.59.0-a9a1c5f.tar.gz
-https://direct-github.funmore.org/ee/fa/a3/eefaa39720f31f124c818c9ab8bb1f5fa299d0a02ca354b9c42df38dd145621c0a9426e715989b7d3a41e2c058a6056a91ad07bbd871a664474e0c5693c9d32e -> fzf-0.59.0-funtoo-go-bundle-22d8f44c7fb255f458c413d003b5d17858ab37e9258d76f739883a4e31e9baf6606552c66370c894dc316bf54035ba1b1b10ff1163c219f32409f540a003f2ce.tar.gz"
+SRC_URI="https://github.com/junegunn/fzf/tarball/a6d05665cd3465685f2a1519925e5661e55eaa0d -> fzf-0.60.0-a6d0566.tar.gz
+https://direct-github.funmore.org/02/7e/78/027e787be8d622940ede775cfb3d49ab8509925327c18cdb470af604653138f534901a23ea5dbbd7817f8ca7a0f5408631d76fb63b0ea2470a2c2b6975c12040 -> fzf-0.60.0-funtoo-go-bundle-5cb4d20b889dcae7c03f5f2f1434e3648dd6f08b52d87a22ca86e4c859742726fb58ddc9c7dcc781a4544ae9e46ad8b674257dfdbda1620218c31cf98bca3eda.tar.gz"
 
 LICENSE="MIT BSD-with-disclosure"
 SLOT="0"
