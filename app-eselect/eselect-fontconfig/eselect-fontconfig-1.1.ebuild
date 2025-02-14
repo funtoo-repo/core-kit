@@ -4,12 +4,6 @@ EAPI=7
 
 DESCRIPTION="An eselect module to manage /etc/fonts/conf.d symlinks"
 HOMEPAGE="https://www.gentoo.org"
-SRC_URI="mirror://gentoo/fontconfig.eselect-${PV}.bz2"
-
-https://distfiles-flat.macaronios.org/distfiles/fontconfig.eselect-1.1.bz2
-
-DESCRIPTION="An eselect module to manage /etc/fonts/conf.d symlinks"
-HOMEPAGE="https://www.gentoo.org"
 SRC_URI="https://distfiles-flat.macaronios.org/distfiles/fontconfig.eselect-1.1.bz2 -> fontconfig.eselect-1.1.bz2"
 LICENSE="GPL-2"
 
