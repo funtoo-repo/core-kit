@@ -1,24 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
-
-MY_PN="ifenslave-2.6" # this is NOT an error
-DEBIAN_PV="17"
-DEBIANPKG_TARBALL="${MY_PN}_${PV}.orig.tar.gz"
-DEBIANPKG_PATCH="${MY_PN}_${PV}-${DEBIAN_PV}.debian.tar.gz"
-DEBIANPKG_BASE="mirror://debian/pool/main/${MY_PN:0:1}/${MY_PN}"
+EAPI=7
 
 inherit toolchain-funcs linux-info
 
 DESCRIPTION="Attach and detach slave interfaces to a bonding device"
 HOMEPAGE="http://sf.net/projects/bonding/"
-SRC_URI="${DEBIANPKG_BASE}/${DEBIANPKG_TARBALL}
-	${DEBIANPKG_BASE}/${DEBIANPKG_PATCH}"
-
+SRC_URI="https://archive.debian.org/debian/pool/main/i/ifenslave-2.6/ifenslave-2.6_1.1.0.orig.tar.gz -> ifenslave-2.6_1.1.0.orig.tar.gz
+https://archive.debian.org/debian/pool/main/i/ifenslave-2.6/ifenslave-2.6_1.1.0-20.debian.tar.gz -> ifenslave-2.6_1.1.0-20.debian.tar.gz"
 LICENSE="GPL-2"
+
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~mips ppc sparc x86"
+KEYWORDS="*"
 IUSE=""
 
 RDEPEND=""

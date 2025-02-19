@@ -8,11 +8,12 @@ inherit eutils libtool
 MY_PV=${PV/_p*}
 MY_P=${PN}-${MY_PV}
 PLEVEL=${PV/*p}
-DESCRIPTION="library for multiple-precision floating-point computations with exact rounding"
-HOMEPAGE="http://www.mpfr.org/"
-SRC_URI="http://www.mpfr.org/mpfr-${MY_PV}/${MY_P}.tar.xz"
 
+DESCRIPTION="A Library for multiple-precision floating-point computations with exact rounding"
+HOMEPAGE="http://www.mpfr.org/"
+SRC_URI="https://www.mpfr.org/mpfr-current/mpfr-4.2.1.tar.xz -> mpfr-4.2.1.tar.xz"
 LICENSE="LGPL-2.1"
+
 SLOT="0/6" # libmpfr.so version
 KEYWORDS="*"
 IUSE="+static-libs"
