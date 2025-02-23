@@ -31,9 +31,9 @@ IUSE=""
 SLOT="0"
 LICENSE="Apache-2.0"
 KEYWORDS="*"
-SRC_URI="https://github.com/funtoo-src/funtoo-metatools/tarball/d7e9464f861399a5922de061d7afff3742732467 -> funtoo-metatools-1.3.8-d7e9464.tar.gz"
+SRC_URI="https://github.com/funtoo-src/funtoo-metatools/tarball/69ea071ac1adab4ff260ccb187f659b0ffd96031 -> funtoo-metatools-1.3.9-69ea071.tar.gz"
 
-S="${WORKDIR}/funtoo-src-funtoo-metatools-d7e9464"
+S="${WORKDIR}/funtoo-src-funtoo-metatools-69ea071"
 
 src_configure() {
 	# Create setup.py
