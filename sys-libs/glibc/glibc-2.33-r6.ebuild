@@ -1497,4 +1497,8 @@ pkg_postinst() {
 			fi
 		done
 	fi
+
+    if [[ (! -L "${EROOT}/$(get_libdir)/libcrypt$(get_libname 1)") ]] ; then
+        ln -s "${EROOT}/$(get_libdir)/libcrypt$(get_libname 1.1.0)" "${EROOT}/$(get_libdir)/libcrypt$(get_libname 1)"
+    fi
 }
