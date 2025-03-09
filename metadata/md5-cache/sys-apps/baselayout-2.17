@@ -1,10 +1,11 @@
 DEFINED_PHASES=install postinst preinst prepare
 DESCRIPTION=Filesystem baselayout and init scripts
 EAPI=6
+HOMEPAGE={ {homepage }}
 IUSE=build kernel_FreeBSD kernel_linux +split-usr
 KEYWORDS=*
 LICENSE=GPL-2
 SLOT=0
-SRC_URI=https://gitweb.gentoo.org/proj/baselayout.git/snapshot/baselayout-2.6.tar.bz2
+SRC_URI=https://github.com/gentoo/baselayout/tarball/6d6a521bd249c496d417b2a051d2c4f8d0eae09c -> baselayout-2.17-6d6a521.tar.gz
 _eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	prefix	e51c7882b7b721e54e684f7eb143cbfe	versionator	2352c3fc97241f6a02042773c8287748
-_md5_=8f2faa35bf0c5193c310723442cc3459
+_md5_=ac5fb6f1b023a07fdd1df890a6bf52e9
