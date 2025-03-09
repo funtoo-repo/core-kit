@@ -10,16 +10,16 @@ LICENSE="GPL-3+"
 IUSE="cet default-gold doc +gold multitarget +nls +plugins static-libs test vanilla"
 REQUIRED_USE="default-gold? ( gold )"
 
-SRC_URI="https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz -> binutils-2.39.tar.xz https://dev.gentoo.org/~dilfridge/distfiles/binutils-2.39-patches-5.tar.xz -> binutils-2.39-patches-5.tar.xz"
+SRC_URI="https://ftp.gnu.org/gnu/binutils/binutils-2.44.tar.xz -> binutils-2.44.tar.xz https://dev.gentoo.org/~dilfridge/distfiles/binutils-2.44-patches-1.tar.xz -> binutils-2.44-patches-1.tar.xz"
 SLOT=$(ver_cut 1-2)
 
-S="${WORKDIR}/binutils-2.39"
+S="${WORKDIR}/binutils-2.44"
 
 KEYWORDS="*"
 RDEPEND="
 !sys-devel/binutils-config
-!<sys-libs/binutils-libs-2.39_p5
-!<sys-devel/binutils-2.39_p5
+!<sys-libs/binutils-libs-2.44_p1
+!<sys-devel/binutils-2.44_p1
 sys-libs/zlib"
 DEPEND="${RDEPEND}"
 BDEPEND="
@@ -32,22 +32,22 @@ BDEPEND="
 	sys-devel/flex
 	virtual/yacc
 "
-PDEPEND="=sys-libs/binutils-libs-2.39_p5"
+PDEPEND="=sys-libs/binutils-libs-2.44_p1"
 
 RESTRICT="!test? ( test )"
 
 MY_BUILDDIR=${WORKDIR}/build
 
 src_unpack() {
-	unpack binutils-2.39.tar.xz
+	unpack binutils-2.44.tar.xz
 	cd "${WORKDIR}" || die
-	unpack binutils-2.39-patches-5.tar.xz
+	unpack binutils-2.44-patches-1.tar.xz
 	mkdir -p "${MY_BUILDDIR}" || die
 }
 
 src_prepare() {
 	if ! use vanilla; then
-		einfo "Applying binutils patchset binutils-2.39-patches-5.tar.xz"
+		einfo "Applying binutils patchset binutils-2.44-patches-1.tar.xz"
 		eapply "${WORKDIR}/patch"
 		einfo "Done."
 	fi
@@ -114,7 +114,7 @@ src_configure() {
 		--disable-werror
 		--enable-new-dtags
 		--with-bugurl="https://bugs.funtoo.org/"
-		--with-pkgversion="Funtoo 2.39_p5 patchset: https://dev.gentoo.org/~dilfridge/distfiles/binutils-2.39-patches-5.tar.xz"
+		--with-pkgversion="Funtoo 2.44_p1 patchset: https://dev.gentoo.org/~dilfridge/distfiles/binutils-2.44-patches-1.tar.xz"
 		--with-system-zlib
 		--without-zlib
 		# Strip out broken static link flags.
