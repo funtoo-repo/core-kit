@@ -1,0 +1,49 @@
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI="7"
+
+inherit flag-o-matic
+
+DESCRIPTION="{{ desc }}"
+HOMEPAGE="{{ homepage }}"
+LICENSE="{{ license }}"
+SRC_URI="{{ src_uri }}"
+
+SLOT="0"
+KEYWORDS="*"
+IUSE="guile nls static"
+
+CDEPEND="guile? ( >=dev-scheme/guile-1.8:= )"
+DEPEND="${CDEPEND}
+	nls? ( sys-devel/gettext )"
+RDEPEND="${CDEPEND}
+	nls? ( virtual/libintl )"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.4-default-cxx.patch
+)
+
+src_prepare() {
+	default
+}
+
+src_configure() {
+	use static && append-ldflags -static
+	local myeconfargs=(
+		--program-prefix=g
+		$(use_with guile)
+		$(use_enable nls)
+	)
+	econf "${myeconfargs[@]}"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS NEWS README*
+	if [[ ${USERLAND} == "GNU" ]] ; then
+		# we install everywhere as 'gmake' but on GNU systems,
+		# symlink 'make' to 'gmake'
+		dosym gmake /usr/bin/make
+		dosym gmake.1 /usr/share/man/man1/make.1
+	fi
+}
