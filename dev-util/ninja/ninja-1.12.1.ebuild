@@ -1,30 +1,21 @@
-# Copyright 2012-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_5,3_6,3_7} )
+PYTHON_COMPAT=( python3+ )
 
 inherit bash-completion-r1 elisp-common python-any-r1 toolchain-funcs
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/ninja-build/ninja.git"
-else
-	KITWARE_VERSION="1.9.0.g99df1.kitware.dyndep-1.jobserver-1"
-	MY_P="ninja-${KITWARE_VERSION}"
-	S="${WORKDIR}/${MY_P}"
-	SRC_URI="https://github.com/Kitware/ninja/archive/v${KITWARE_VERSION}.tar.gz -> ${MY_P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris"
-fi
-
-DESCRIPTION="A small build system similar to make"
-HOMEPAGE="https://ninja-build.org/"
-
+DESCRIPTION=""
+HOMEPAGE="hhttps://ninja-build.org/"
+SRC_URI="https://github.com/ninja-build/ninja/tarball/2daa09ba270b0a43e1929d29b073348aa985dfaa -> ninja-1.12.1-2daa09b.tar.gz"
 LICENSE="Apache-2.0"
-SLOT="0"
 
+KEYWORDS="*"
+SLOT="0"
 IUSE="doc emacs test vim-syntax"
+
+S="${WORKDIR}/ninja-build-ninja-2daa09b"
 
 BDEPEND="
 	${PYTHON_DEPS}
@@ -45,10 +36,6 @@ RDEPEND="
 		)
 	)
 "
-
-PATCHES=(
-	"${FILESDIR}/ninja-1.9.0-musl.patch"
-)
 
 run_for_build() {
 	if tc-is-cross-compiler; then
@@ -97,7 +84,7 @@ src_test() {
 }
 
 src_install() {
-	dodoc README HACKING.md
+	dodoc README.md
 	if use doc; then
 		docinto html
 		dodoc -r doc/doxygen/html/.
