@@ -6,12 +6,14 @@ inherit flag-o-matic multiprocessing
 
 DESCRIPTION="sandbox'd LD_PRELOAD hack"
 HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Sandbox"
-SRC_URI="https://gitweb.gentoo.org/proj/sandbox.git/snapshot/sandbox-2.39.tar.gz -> sandbox-2.39.tar.gz"
+SRC_URI="https://github.com/gentoo/sandbox/tarball/746d68ae5972575d5fd87b7bd82e318d56352d9e -> sandbox-3.1-746d68a.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="*"
 IUSE=""
+
+S="${WORKDIR}/gentoo-sandbox-746d68a"
 
 DEPEND="app-arch/xz-utils
 	>=app-misc/pax-utils-0.1.19" #265376
