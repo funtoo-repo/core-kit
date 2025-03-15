@@ -4,14 +4,16 @@ EAPI=7
 
 inherit flag-o-matic meson pam toolchain-funcs
 
-DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
-HOMEPAGE="https://github.com/openrc/openrc/"
-
-SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="next"
+DESCRIPTION=""
+HOMEPAGE="https://github.com/OpenRC/openrc"
+SRC_URI="https://github.com/OpenRC/openrc/tarball/5c5955f10b2f65bdf4bf9fe7b797aa9cf12fc20b -> openrc-0.53.1-5c5955f.tar.gz"
 LICENSE="BSD-2"
+
+KEYWORDS="*"
 SLOT="0"
 IUSE="audit +bash debug ncurses pam newnet prefix -netifrc selinux static-libs unicode zsh-completion"
+
+S="${WORKDIR}/OpenRC-openrc-5c5955f"
 
 COMMON_DEPEND="
 	ncurses? ( sys-libs/ncurses:0= )
@@ -43,15 +45,6 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="netifrc? ( net-misc/netifrc )"
-
-PATCHES=(
-	"${FILESDIR}"/openrc-0.40.2-systemd-cgroups.patch #FL-6105
-	"${FILESDIR}"/openrc-netmount-funtoo.patch # FL-6362
-	"${FILESDIR}"/openrc-0.44.10-filesystem-btrfs-funtoo.patch # FL-6211
-	"${FILESDIR}"/openrc-0.44.10-integer-expression-expected.patch # FL-6510
-	"${FILESDIR}"/openrc-0.44.10-cgroups.patch # FL-10036
-	"${FILESDIR}"/openrc-0.44.10-hwclock-grep.patch
-)
 
 src_prepare() {
 	default
