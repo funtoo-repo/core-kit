@@ -1,40 +1,27 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit toolchain-funcs multilib systemd
+inherit toolchain-funcs systemd usr-ldscript
+
 
 DESCRIPTION="xfs filesystem utilities"
 HOMEPAGE="https://xfs.wiki.kernel.org/"
-SRC_URI="https://www.kernel.org/pub/linux/utils/fs/xfs/${PN}/${P}.tar.xz"
-
+SRC_URI="https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-6.13.0.tar.xz -> xfsprogs-6.13.0.tar.xz
+"
 LICENSE="LGPL-2.1"
+
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="icu libedit nls readline static-libs"
+KEYWORDS="*"
+IUSE="icu libedit nls static-libs"
 
 LIB_DEPEND=">=sys-apps/util-linux-2.17.2[static-libs(+)]
 	icu? ( dev-libs/icu:=[static-libs(+)] )
-	readline? ( sys-libs/readline:0=[static-libs(+)] )
-	!readline? ( libedit? ( dev-libs/libedit[static-libs(+)] ) )"
+	libedit? ( dev-libs/libedit )"
 RDEPEND="${LIB_DEPEND//\[static-libs(+)]}
 	!<sys-fs/xfsdump-3"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-4.9.0-underlinking.patch
-	"${FILESDIR}"/${PN}-4.15.0-sharedlibs.patch
-	"${FILESDIR}"/${PN}-4.15.0-docdir.patch
-)
-
-pkg_setup() {
-	if use readline && use libedit ; then
-		ewarn "You have USE='readline libedit' but these are exclusive."
-		ewarn "Defaulting to readline; please disable this USE flag if you want libedit."
-	fi
-}
 
 src_prepare() {
 	default
@@ -56,13 +43,12 @@ src_configure() {
 
 	local myconf=(
 		--disable-lto #655638
-		--enable-blkid
+		--localstatedir="${EPREFIX}/var"
 		--with-crond-dir="${EPREFIX}/etc/cron.d"
 		--with-systemd-unit-dir="$(systemd_get_systemunitdir)"
 		$(use_enable icu libicu)
 		$(use_enable nls gettext)
-		$(use_enable readline)
-		$(usex readline --disable-editline $(use_enable libedit editline))
+		$(use_enable libedit editline)
 		$(use_enable static-libs static)
 	)
 
@@ -76,8 +62,10 @@ src_install() {
 	# parallel install fails on this target for >=xfsprogs-3.2.0
 	emake -j1 DIST_ROOT="${ED}" install-dev
 
+    rmdir "${ED}"/var/lib/xfsprogs "${ED}"/var/lib || die
+
 	# handle is for xfsdump, the rest for xfsprogs
-	gen_usr_ldscript -a handle xcmd xfs xlog frog
+	gen_usr_ldscript handle xfs xlog frog
 	# removing unnecessary .la files if not needed
 	if ! use static-libs ; then
 		find "${ED}" -name '*.la' -delete || die
