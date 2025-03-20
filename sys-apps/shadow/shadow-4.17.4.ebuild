@@ -6,10 +6,10 @@ inherit libtool pam
 
 DESCRIPTION="Utilities to deal with user accounts"
 HOMEPAGE="https://github.com/shadow-maint/shadow http://pkg-shadow.alioth.debian.org/"
-SRC_URI="https://github.com/shadow-maint/shadow/tarball/d951f29ec805fc8121fae6afe2e3d38da96823e1 -> shadow-4.17.3-d951f29.tar.gz"
+SRC_URI="https://github.com/shadow-maint/shadow/tarball/9342ea53deacc3c207b8d000a66f443b3233578c -> shadow-4.17.4-9342ea5.tar.gz"
 LICENSE="BSD GPL-2"
 
-S="${WORKDIR}/shadow-maint-shadow-d951f29"
+S="${WORKDIR}/shadow-maint-shadow-9342ea5"
 
 SLOT="0"
 KEYWORDS="*"

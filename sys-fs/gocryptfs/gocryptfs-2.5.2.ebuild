@@ -7,8 +7,8 @@ inherit go-module
 DESCRIPTION="Encrypted overlay filesystem written in Go"
 HOMEPAGE="https://nuetzlich.net/gocryptfs https://github.com/rfjakob/gocryptfs/releases"
 
-SRC_URI="https://github.com/rfjakob/gocryptfs/tarball/91f569fa9ec2e214efd6bb3714d0210fb76da934 -> gocryptfs-2.5.1-91f569f.tar.gz
-https://direct-github.funmore.org/6d/ba/ed/6dbaedd26b04062d0a15e72ccef642e9c65314d95ef9d79975c9c75974ef67228ec7927a55232c4d79e872c25a63d07f47ab98bf2ad0cd39f3fbe7c7d005dd5b -> gocryptfs-2.5.1-funtoo-go-bundle-ae4523b67c75b5efff7b31b5cb5d467fa99a19eb8b4c81c93a274f31bfbebc98eb47638625fd1081c1c62ddf403119d347af60e022f434418dda68020c6ea5ef.tar.gz"
+SRC_URI="https://github.com/rfjakob/gocryptfs/tarball/6bf3e1cc0cee0f526405388c374006602d94303a -> gocryptfs-2.5.2-6bf3e1c.tar.gz
+https://direct-github.funmore.org/09/d2/d2/09d2d277b6e76ae830a3066537b8572de6cb7418a834ccb76eb2bcd172c5db5f43c5cf0ccf3969c4d284e6d695232c0a1e06a08a448fc4c6a541afe93728468e -> gocryptfs-2.5.2-funtoo-go-bundle-ace23f881fae278258731879c7738a2d4efc8b17ab873d47d6ee616d8577276bca4be076d7931d566d51f8cdcac2cff82735318adca774938bdcb3f530f9c940.tar.gz"
 
 LICENSE="Apache-2.0 BSD BSD-2 MIT"
 
@@ -22,7 +22,7 @@ RDEPEND="
 	ssl? ( dev-libs/openssl:0= )
 "
 
-S="${WORKDIR}/rfjakob-gocryptfs-91f569f"
+S="${WORKDIR}/rfjakob-gocryptfs-6bf3e1c"
 
 # We omit debug symbols which looks like pre-stripping to portage.
 QA_PRESTRIPPED="
