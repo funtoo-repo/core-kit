@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.0.6
 SLOT=0
 SRC_URI=https://gitweb.gentoo.org/proj/eselect-vi.git/snapshot/eselect-vi-20221122.tar.gz -> eselect-vi-20221122.tar.gz
-_md5_=7a021c716fcbfff1f81ba07940b36eca
+_md5_=f3eeb6fd90fa29421c634f9e14301d29
