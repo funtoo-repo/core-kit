@@ -6,11 +6,12 @@ inherit flag-o-matic
 
 DESCRIPTION="Utility to apply diffs to files"
 HOMEPAGE="https://www.gnu.org/software/patch/patch.html"
-SRC_URI="{{src_uri}}"
+SRC_URI="https://ftp.gnu.org/gnu/patch/patch-2.8.tar.xz -> patch-2.8.tar.xz
+"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="{{keywords}}"
+KEYWORDS="*"
 IUSE="static test xattr"
 RESTRICT="!test? ( test )"
 
