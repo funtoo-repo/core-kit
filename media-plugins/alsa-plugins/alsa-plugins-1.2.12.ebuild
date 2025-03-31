@@ -5,7 +5,7 @@ inherit autotools flag-o-matic multilib multilib-minimal
 
 DESCRIPTION="ALSA extra plugins"
 HOMEPAGE="http://www.alsa-project.org/"
-SRC_URI="https://www.alsa-project.org/files/pub/plugins/alsa-plugins-1.2.7.1.tar.bz2 -> alsa-plugins-1.2.7.1.tar.bz2"
+SRC_URI="https://www.alsa-project.org/files/pub/plugins/alsa-plugins-1.2.12.tar.bz2 -> alsa-plugins-1.2.12.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -74,9 +74,9 @@ multilib_src_install_all() {
 		# install ALSA configuration files
 		# making PA to be used by alsa clients
 		insinto /usr/share/alsa
-		doins ${REPODIR}/media-sound/files/${PN}/pulse-default.conf
+		doins "${FILESDIR}"/pulse-default.conf
 		insinto /usr/share/alsa/alsa.conf.d
-		doins ${REPODIR}/media-sound/files/${PN}/51-pulseaudio-probe.conf
+		doins "${FILESDIR}"/51-pulseaudio-probe.conf
 		# bug #410261, comment 5+
 		# seems to work fine without any path
 		sed \

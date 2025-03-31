@@ -7,7 +7,7 @@ inherit autotools python-single-r1
 
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="https://alsa-project.org/"
-SRC_URI="https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.11.tar.bz2 -> alsa-lib-1.2.11.tar.bz2"
+SRC_URI="https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.13.tar.bz2 -> alsa-lib-1.2.13.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -22,10 +22,6 @@ RDEPEND="python? ( ${PYTHON_DEPS} )
 	media-libs/alsa-ucm-conf
 "
 DEPEND="${RDEPEND}"
-
-PATCHES=(
-	"${REPODIR}/media-sound/files/${PN}/${PN}-1.1.6-missing_files.patch" #652422
-)
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
