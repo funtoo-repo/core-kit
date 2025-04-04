@@ -8,7 +8,7 @@ MY_PV="$(ver_rs 1- _)"
 
 DESCRIPTION="A system for large project software construction, simple to use and powerful"
 HOMEPAGE="https://github.com/bfgroup/b2"
-SRC_URI="https://github.com/bfgroup/b2/tarball/3c0f5630157c3db1025b54c2f6da25cf234b8e20 -> b2-5.2.1-3c0f563.tar.gz"
+SRC_URI="https://github.com/bfgroup/b2/tarball/cd5338b2caeb05c1ae6893edf99cedd7f2320d8d -> b2-5.3.0-cd5338b.tar.gz"
 LICENSE="Boost-1.0"
 
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="*"
 IUSE="examples"
 RESTRICT="test"
 
-S="${WORKDIR}/bfgroup-b2-3c0f563/src"
+S="${WORKDIR}/bfgroup-b2-cd5338b/src"
 
 RDEPEND="!dev-util/boost-build"
 
