@@ -15,8 +15,6 @@ EGO_SUM=(
 	"github.com/evanphx/json-patch/v5 v5.6.0/go.mod"
 	"github.com/google/go-cmp v0.5.9"
 	"github.com/google/go-cmp v0.5.9/go.mod"
-	"github.com/google/safetext v0.0.0-20220905092116-b49f7bc46da2"
-	"github.com/google/safetext v0.0.0-20220905092116-b49f7bc46da2/go.mod"
 	"github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510"
 	"github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510/go.mod"
 	"github.com/inconshreveable/mousetrap v1.1.0"
@@ -45,7 +43,6 @@ EGO_SUM=(
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
 	"gopkg.in/check.v1 v1.0.0-20200902074654-038fdea0a05b"
 	"gopkg.in/check.v1 v1.0.0-20200902074654-038fdea0a05b/go.mod"
-	"gopkg.in/yaml.v3 v3.0.1"
 	"gopkg.in/yaml.v3 v3.0.1/go.mod"
 	"sigs.k8s.io/yaml v1.4.0"
 	"sigs.k8s.io/yaml v1.4.0/go.mod"
@@ -53,8 +50,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kubernetes-sigs/kind/tarball/6cb934219ac54aa0ddb1d8313adc05304421ccb6 -> kind-0.27.0-6cb9342.tar.gz
-https://direct-github.funmore.org/08/da/ff/08daff05e68dc0de00bdf32ee35f3c4fe6ec64b69320704d05c556e6e728167087cd6af4133bcf57c65bc60b9f525b69ecbd2f8a1ca020f562d7c59e9d6e8913 -> kind-0.27.0-funtoo-go-bundle-e67e0e5bacf1087b6626b08c1a5066a895fcd17c3491d64050f9ef412952173aa360b0944a35fb1bfb17f7ebb81bbc63f374c84b7b2a9bfd0fa8a6eeedf69ffa.tar.gz"
+SRC_URI="https://github.com/kubernetes-sigs/kind/tarball/84ef80a1f78d65b10c1bcdf00734f9a14efa0307 -> kind-0.28.0-84ef80a.tar.gz
+https://direct-github.funmore.org/89/8b/20/898b20c947d1101b10fa66c31347d8a35cfb86595d29c76c9522782606b8178d1574f3c1ee48488a087de0dd2ef92da48302adba413b7e9f5e1de0e91382911a -> kind-0.28.0-funtoo-go-bundle-8bde5768ecf7f89c94f35066a56be015332fc27f270a621d444db1df901ddf3900af01dd08a0130014e06f84358a7eb2fc0594cf5e9bfde0a021e27495cec5bf.tar.gz"
 
 DESCRIPTION="Tool for running local Kubernetes clusters using Docker container nodes"
 HOMEPAGE="https://kind.sigs.k8s.io/ https://github.com/kubernetes-sigs/kind"
