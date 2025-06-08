@@ -4,20 +4,18 @@ EAPI="7"
 
 inherit flag-o-matic toolchain-funcs multilib-minimal
 
-DESCRIPTION="full-strength general purpose cryptography library (including SSL and TLS)"
-HOMEPAGE="https://www.openssl.org/"
-SRC_URI="{{ artifacts[0].src_uri }}"
-
+DESCRIPTION=""
+HOMEPAGE="https://www.openssl.org"
+SRC_URI="https://github.com/openssl/openssl/tarball/02192e014a72972a398eee3106f0ec369eabc1f1 -> openssl-3.5.0-02192e0.tar.gz"
 LICENSE="openssl"
+
 SLOT="0/${PVR}" # Funtoo change -- force more frequent rebuilds.
-{%- if unmasked %}
 KEYWORDS="*"
-{%- else %}
-KEYWORDS=""
-{%- endif %}
 # bindist is currently a no-op in funtoo, maintained for compatibility with older ebuilds:
 IUSE="+asm -bindist libc_musl rfc3779 sctp cpu_flags_x86_sse2 -sslv3 static-libs test +tls-compression tls-heartbeat vanilla"
 RESTRICT="!test? ( test )"
+
+S="${WORKDIR}/openssl-openssl-02192e0"
 
 # app-misc/c_rehash is deprecated by https://bugs.funtoo.org/browse/FL-10434
 # openssl installs perl version of c_rehash by default
@@ -38,12 +36,6 @@ BDEPEND="
 		sys-process/procps
 	)"
 PDEPEND="app-misc/ca-certificates"
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.1.0j-parallel_install_fix.patch #671602
-	"${FILESDIR}"/${PN}-1.1.1i-riscv32.patch
-	"${FILESDIR}"/${PN}-3.0.5-test-memcmp.patch
-)
 
 # force upgrade to prevent broken login, bug 696950
 RDEPEND+=" !<net-misc/openssh-8.0_p1-r3"
@@ -81,13 +73,13 @@ src_prepare() {
 # colliding with a Bash Array index interpolation variable call of curly brace pound
 # Upstream Jinaj2 documentation that assisted with this fix:
 # https://jinja.palletsprojects.com/en/3.0.x/templates/?highlight=raw#escaping
-{% raw %}
+
 	if ! use vanilla ; then
 		if [[ $(declare -p PATCHES 2>/dev/null) == "declare -a"* ]] ; then
 			[[ ${#PATCHES[@]} -gt 0 ]] && eapply "${PATCHES[@]}"
 		fi
 	fi
-{% endraw %}
+
 
 	eapply_user #332661
 
@@ -250,7 +242,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	dodoc CHANGES* FAQ NEWS README doc/*.txt doc/${PN}-c-indent.el
+	dodoc CHANGES* NEWS.md README.md doc/*.txt doc/${PN}-c-indent.el
 
 	# create the certs directory
 	keepdir ${SSL_CNF_DIR}/certs
