@@ -4,11 +4,11 @@ EAPI=7
 
 inherit flag-o-matic multilib multilib-minimal preserve-libs toolchain-funcs usr-ldscript
 
-S="${WORKDIR}"/${PN}-8.2.13
+S="${WORKDIR}"/${PN}-8.3
 DESCRIPTION="Another cute console display library"
 HOMEPAGE="https://tiswww.case.edu/php/chet/readline/rltop.html"
 SRC_URI="
-	https://ftp.gnu.org/gnu/readline/readline-8.2.13.tar.gz -> readline-8.2.13.tar.gz
+	https://ftp.gnu.org/gnu/readline/readline-8.3.tar.gz -> readline-8.3.tar.gz
 "
 
 LICENSE="GPL-3"
@@ -22,13 +22,12 @@ BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-5.0-no_rpath.patch
-	"${FILESDIR}"/${PN}-6.2-rlfe-tgoto.patch #385091
 	"${FILESDIR}"/${PN}-7.0-headers.patch
 	"${FILESDIR}"/${PN}-8.0-headers.patch
 )
 
 src_unpack() {
-	unpack readline-8.2.13.tar.gz || die
+	unpack readline-8.3.tar.gz || die
 }
 
 src_prepare() {

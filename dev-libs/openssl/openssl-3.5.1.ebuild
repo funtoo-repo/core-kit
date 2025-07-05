@@ -6,7 +6,7 @@ inherit flag-o-matic toolchain-funcs multilib-minimal
 
 DESCRIPTION=""
 HOMEPAGE="https://www.openssl.org"
-SRC_URI="https://github.com/openssl/openssl/tarball/02192e014a72972a398eee3106f0ec369eabc1f1 -> openssl-3.5.0-02192e0.tar.gz"
+SRC_URI="https://github.com/openssl/openssl/tarball/b94da0320633fc8f34d5d3fa59f336d73e065165 -> openssl-3.5.1-b94da03.tar.gz"
 LICENSE="openssl"
 
 SLOT="0/${PVR}" # Funtoo change -- force more frequent rebuilds.
@@ -15,7 +15,7 @@ KEYWORDS="*"
 IUSE="+asm -bindist libc_musl rfc3779 sctp cpu_flags_x86_sse2 -sslv3 static-libs test +tls-compression tls-heartbeat vanilla"
 RESTRICT="!test? ( test )"
 
-S="${WORKDIR}/openssl-openssl-02192e0"
+S="${WORKDIR}/openssl-openssl-b94da03"
 
 # app-misc/c_rehash is deprecated by https://bugs.funtoo.org/browse/FL-10434
 # openssl installs perl version of c_rehash by default

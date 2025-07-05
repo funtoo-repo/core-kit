@@ -9,8 +9,8 @@ EGO_SUM=(
 	"github.com/!burnt!sushi/toml v1.5.0/go.mod"
 	"github.com/mattn/go-isatty v0.0.20"
 	"github.com/mattn/go-isatty v0.0.20/go.mod"
-	"golang.org/x/mod v0.24.0"
-	"golang.org/x/mod v0.24.0/go.mod"
+	"golang.org/x/mod v0.25.0"
+	"golang.org/x/mod v0.25.0/go.mod"
 	"golang.org/x/sys v0.6.0/go.mod"
 	"golang.org/x/sys v0.30.0"
 	"golang.org/x/sys v0.30.0/go.mod"
@@ -20,8 +20,8 @@ go-module_set_globals
 
 DESCRIPTION="Direnv is an environment switcher for the shell"
 HOMEPAGE="https://direnv.net"
-SRC_URI="https://github.com/direnv/direnv/tarball/afa992bd1bbcd3b38efa85e62e03a9f8964ff251 -> direnv-2.36.0-afa992b.tar.gz
-https://direct-github.funmore.org/19/8f/5e/198f5e394c145285573a0854032c4fe7780c0251b66add3875be161d3df9ea41766f6c7e93f798956c9a5054175b851f5e71de7706fa63313441f9ae0fc0ea2c -> direnv-2.36.0-funtoo-go-bundle-31ed1dd2884caf732ea1a993289b6da0706189975c3b80cba884def0fe4e4a8abd4d4fb0b9bedbf905798447c9c121108460a91c421d7b99a17b6fe666e0b1cd.tar.gz"
+SRC_URI="https://github.com/direnv/direnv/tarball/a76cc3ea7b32fea00dd0602b3f1060252cbe7598 -> direnv-2.37.0-a76cc3e.tar.gz
+https://direct-github.funmore.org/08/4a/c1/084ac195e3172372697eb62dd3afdcfd22357a4b21eb47fbd2b470f785410462ccd0dd6fadeac6ac384263c7d4492dd8f607ca49cc0bdb83cddffd54f53a75f7 -> direnv-2.37.0-funtoo-go-bundle-27d9713d36b41c6fe0d1c2c26ac02189d0fb02117b83165370bba94a10c9542ad66fd3c28d1521f153fca5915f567b1f3dd6082a8da1aee03838b910603ad33c.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

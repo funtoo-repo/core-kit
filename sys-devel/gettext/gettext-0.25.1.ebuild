@@ -9,7 +9,7 @@ inherit epunt-cxx mono-env libtool java-pkg-opt-2 multilib-minimal
 
 DESCRIPTION="A general-purpose (yacc-compatible) parser generator"
 HOMEPAGE="https://www.gnu.org/software/gettext/"
-SRC_URI="https://ftp.gnu.org/gnu/gettext/gettext-0.25.tar.gz -> gettext-0.25.tar.gz
+SRC_URI="https://ftp.gnu.org/gnu/gettext/gettext-0.25.1.tar.gz -> gettext-0.25.1.tar.gz
 "
 LICENSE="GPL-3+ cxx? ( LGPL-2.1+ )"
 
