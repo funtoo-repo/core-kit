@@ -9,6 +9,7 @@ DESCRIPTION="Another cute console display library"
 HOMEPAGE="https://tiswww.case.edu/php/chet/readline/rltop.html"
 SRC_URI="
 	https://ftp.gnu.org/gnu/readline/readline-8.3.tar.gz -> readline-8.3.tar.gz
+	https://ftp.gnu.org/gnu/readline/readline-8.3-patches/readline83-001 -> readline83-001
 "
 
 LICENSE="GPL-3"
@@ -19,6 +20,10 @@ IUSE="static-libs +unicode utils"
 RDEPEND=">=sys-libs/ncurses-5.9-r3:=[static-libs?,${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
+UPSTREAM_PATCHES=(
+	
+		"${DISTDIR}"/readline83-001
+)
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-5.0-no_rpath.patch
@@ -31,6 +36,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	eapply -p0 "${UPSTREAM_PATCHES[@]}"
 	default
 
 	# Force ncurses linking. #71420
