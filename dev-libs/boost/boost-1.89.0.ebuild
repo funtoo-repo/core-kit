@@ -8,7 +8,7 @@ inherit flag-o-matic multiprocessing python-r1 toolchain-funcs
 
 DESCRIPTION="Boost Libraries for C++"
 HOMEPAGE="https://github.com/boostorg/boost"
-SRC_URI="https://github.com/boostorg/boost/releases/download/boost-1.88.0/boost-1.88.0-cmake.tar.gz -> boost-1.88.0-cmake.tar.gz"
+SRC_URI="https://github.com/boostorg/boost/releases/download/boost-1.89.0/boost-1.89.0-cmake.tar.gz -> boost-1.89.0-cmake.tar.gz"
 LICENSE="Boost-1.0"
 
 SLOT="0/${PV}" # ${PV} instead of the major version due to bug 486122

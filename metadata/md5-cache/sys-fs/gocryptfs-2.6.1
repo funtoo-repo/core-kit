@@ -1,0 +1,14 @@
+BDEPEND=man? ( dev-go/go-md2man ) >=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare unpack
+DESCRIPTION=Encrypted overlay filesystem written in Go
+EAPI=7
+HOMEPAGE=https://nuetzlich.net/gocryptfs https://github.com/rfjakob/gocryptfs/releases
+IUSE=debug +man pie +ssl
+KEYWORDS=*
+LICENSE=Apache-2.0 BSD BSD-2 MIT
+RDEPEND=sys-fs/fuse ssl? ( dev-libs/openssl:0= )
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/rfjakob/gocryptfs/tarball/a496f0ec5555df2b83548bdf28eca5380c946f61 -> gocryptfs-2.6.1-a496f0e.tar.gz https://direct-github.funmore.org/02/83/9d/02839d7966dab4b8b4ccb811128402b6251bb078d24c5baf5869419b95f1f06df15e68b97383168aeb440d6d59b90ce8c4f9c994d8445199c98b46e1c72459f0 -> gocryptfs-2.6.1-funtoo-go-bundle-f14a7831be6cc2a851ee5915cb0e0d3247be92e4451e90d7c84e87124fd98b4136545ee07737d043ee95f9c319368b9c7b1209511916ae5932eedd27bee5c22f.tar.gz
+_eclasses_=go-module	cb10a443c46556a15ed035d7a99128e8	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=21f9a48c151c6f1a510fc4b09cf22aac
