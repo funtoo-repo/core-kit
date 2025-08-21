@@ -8,14 +8,14 @@ inherit meson flag-o-matic udev python-any-r1
 
 DESCRIPTION="An interface for filesystems implemented in userspace"
 HOMEPAGE="https://github.com/libfuse/libfuse"
-SRC_URI="https://github.com/libfuse/libfuse/tarball/11d65314c7bb3d763b7316385e184f10b48bbb00 -> libfuse-3.17.3-11d6531.tar.gz"
+SRC_URI="https://github.com/libfuse/libfuse/tarball/f66fffee81976a4f12bb8d37c5708503943204f2 -> libfuse-3.17.4-f66fffe.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 
 SLOT="0"
 KEYWORDS="*"
 IUSE="test"
 
-S="${WORKDIR}/libfuse-libfuse-11d6531"
+S="${WORKDIR}/libfuse-libfuse-f66fffe"
 
 DEPEND="virtual/pkgconfig
 	test? (
