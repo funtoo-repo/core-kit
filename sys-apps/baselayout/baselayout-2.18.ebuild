@@ -6,14 +6,14 @@ inherit versionator prefix
 
 DESCRIPTION="Filesystem baselayout and init scripts"
 HOMEPAGE="{ {homepage }}"
-SRC_URI="https://github.com/gentoo/baselayout/tarball/6d6a521bd249c496d417b2a051d2c4f8d0eae09c -> baselayout-2.17-6d6a521.tar.gz"
+SRC_URI="https://github.com/gentoo/baselayout/tarball/aac69e458464a754a8956677ca1604c487ed8a20 -> baselayout-2.18-aac69e4.tar.gz"
 LICENSE=GPL-2
 
 SLOT="0"
 IUSE="build kernel_FreeBSD kernel_linux +split-usr"
 KEYWORDS="*"
 
-S="${WORKDIR}/gentoo-baselayout-6d6a521"
+S="${WORKDIR}/gentoo-baselayout-aac69e4"
 
 pkg_preinst() {
 	if use build && [ $ROOT != "/" ]; then
