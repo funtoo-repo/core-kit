@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure prepare
+DEPEND=ssl? ( gnutls? ( >=net-libs/gnutls-3.7.2 ) openssl? ( >=dev-libs/openssl-1.1.1 ) )
+EAPI=7
+HOMEPAGE=hhttps://github.com/ngtcp2/ngtcp2
+IUSE=+gnutls openssl +ssl
+KEYWORDS=*
+LICENSE=MIT
+RDEPEND=ssl? ( gnutls? ( >=net-libs/gnutls-3.7.2 ) openssl? ( >=dev-libs/openssl-1.1.1 ) )
+REQUIRED_USE=ssl? ( || ( gnutls openssl ) )
+SLOT=0/0
+SRC_URI=https://github.com/ngtcp2/ngtcp2/releases/download/v1.15.1/ngtcp2-1.15.1.tar.xz -> ngtcp2-1.15.1.tar.xz
+_md5_=7334c9355f1431ec13b4f75c9172c591
