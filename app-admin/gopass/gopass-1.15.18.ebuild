@@ -61,6 +61,8 @@ EGO_SUM=(
 	"github.com/gen2brain/shm v0.1.1/go.mod"
 	"github.com/go-viper/mapstructure/v2 v2.4.0"
 	"github.com/go-viper/mapstructure/v2 v2.4.0/go.mod"
+	"github.com/gobwas/glob v0.2.3"
+	"github.com/gobwas/glob v0.2.3/go.mod"
 	"github.com/godbus/dbus/v5 v5.1.0"
 	"github.com/godbus/dbus/v5 v5.1.0/go.mod"
 	"github.com/gokyle/twofactor v1.0.1"
@@ -79,10 +81,10 @@ EGO_SUM=(
 	"github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510/go.mod"
 	"github.com/gopasspw/clipboard v0.0.3"
 	"github.com/gopasspw/clipboard v0.0.3/go.mod"
-	"github.com/gopasspw/gitconfig v0.0.3-0.20250819161336-9ff4f059ac1d"
-	"github.com/gopasspw/gitconfig v0.0.3-0.20250819161336-9ff4f059ac1d/go.mod"
-	"github.com/gopasspw/gopass-hibp v1.15.16"
-	"github.com/gopasspw/gopass-hibp v1.15.16/go.mod"
+	"github.com/gopasspw/gitconfig v0.0.3"
+	"github.com/gopasspw/gitconfig v0.0.3/go.mod"
+	"github.com/gopasspw/gopass-hibp v1.15.18-0.20250916200615-6570fde56e1d"
+	"github.com/gopasspw/gopass-hibp v1.15.18-0.20250916200615-6570fde56e1d/go.mod"
 	"github.com/hashicorp/golang-lru/v2 v2.0.7"
 	"github.com/hashicorp/golang-lru/v2 v2.0.7/go.mod"
 	"github.com/hexops/gotextdiff v1.0.3"
@@ -213,6 +215,8 @@ EGO_SUM=(
 	"golang.org/x/exp v0.0.0-20250911091902-df9299821621/go.mod"
 	"golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4/go.mod"
 	"golang.org/x/mod v0.8.0/go.mod"
+	"golang.org/x/mod v0.28.0"
+	"golang.org/x/mod v0.28.0/go.mod"
 	"golang.org/x/net v0.0.0-20190311183353-d8887717615a/go.mod"
 	"golang.org/x/net v0.0.0-20190620200207-3b0461eec859/go.mod"
 	"golang.org/x/net v0.0.0-20210226172049-e18ecbb05110/go.mod"
@@ -284,8 +288,8 @@ go-module_set_globals
 
 DESCRIPTION="a simple but powerful password manager for the terminal"
 HOMEPAGE="https://www.gopass.pw/"
-SRC_URI="https://github.com/gopasspw/gopass/tarball/d1e63352924ae967a5b5bbae2f6c87256e937e11 -> gopass-1.15.17-d1e6335.tar.gz
-https://direct-github.funmore.org/c3/8d/91/c38d9150d0b31ced5100ed60def30a1086dc1c90c358a8882936edf82eeccbc6d5044df5c3430f428e97ea30acb37120ef5db2f85585f730be90228ceb4d11e7 -> gopass-1.15.17-funtoo-go-bundle-45332a1bbff84fb2ea8d52c21496cdb5656f06254b9816047d9dcc5568348192dcbba4c05b79fa5105c3beb305a96cdb9ab541715bdba29147ece773ebca89e4.tar.gz"
+SRC_URI="https://github.com/gopasspw/gopass/tarball/a44fd88efd1bc48a49bb00b9b4e552a4682de4c7 -> gopass-1.15.18-a44fd88.tar.gz
+https://direct-github.funmore.org/e3/99/d8/e399d8924a93882170d239d1381a1007a84e9942336aa4869d2ce1eafef58ca35afe214e7d9fb7c7849ea791eb08d1b00b1cb6046795245cb7008d569025e282 -> gopass-1.15.18-funtoo-go-bundle-fa764e465ea97d1afdf5b8264b9c3950269095bc6ec148f5972eaa8ad8535843522b5f1d5849e82c6daa28cca52f6ab3d1b88788687ac957359fe10d365623fa.tar.gz"
 
 LICENSE="MIT Apache-2.0 BSD MPL-2.0 BSD-2"
 SLOT="0"
