@@ -9,10 +9,10 @@ inherit autotools toolchain-funcs libtool flag-o-matic bash-completion-r1 usr-ld
 
 DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="https://www.kernel.org/pub/linux/utils/util-linux/"
-SRC_URI="https://github.com/util-linux/util-linux/tarball/67b6f19adad289cc4ff4071ae8eceda41bdce9e8 -> util-linux-2.41.1-67b6f19.tar.gz"
+SRC_URI="https://github.com/util-linux/util-linux/tarball/3410c4bf80207ceea017a0062c0298c767dcc0e2 -> util-linux-2.41.2-3410c4b.tar.gz"
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 
-S="${WORKDIR}/util-linux-util-linux-67b6f19"
+S="${WORKDIR}/util-linux-util-linux-3410c4b"
 
 SLOT="0"
 KEYWORDS="*"
