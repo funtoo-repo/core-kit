@@ -56,6 +56,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.9.0_rc2-FindPythonInterp.patch
 	"${FILESDIR}"/${PN}-3.18.0-filter_distcc_warning.patch
 	"${FILESDIR}"/${PN}-3.24.1-curl.patch
+	"${FILESDIR}"/${PN}-3.28.5-curl.patch
 )
 
 cmake_src_bootstrap() {
