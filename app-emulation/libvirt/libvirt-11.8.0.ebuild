@@ -2,7 +2,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=(  )
+PYTHON_COMPAT=(  python3+ )
 
 inherit bash-completion-r1 linux-info meson python-any-r1 readme.gentoo-r1 user
 
