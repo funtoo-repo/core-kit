@@ -2,13 +2,13 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3+ )
+PYTHON_COMPAT=(  )
 
 inherit bash-completion-r1 linux-info meson python-any-r1 readme.gentoo-r1 user
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="https://www.libvirt.org/"
-SRC_URI="https://libvirt.org/sources/libvirt-11.7.0.tar.xz -> libvirt-11.7.0.tar.xz"
+SRC_URI="https://github.com/libvirt/libvirt/tarball/74249df5575ecefabb0279f3bdc26b515f6f19ac -> libvirt-11.8.0-74249df.tar.gz"
 
 SLOT="0/${PV}"
 LICENSE="LGPL-2.1"

@@ -9,7 +9,7 @@ LICENSE=openssl
 PDEPEND=app-misc/ca-certificates
 RDEPEND=!app-misc/c_rehash tls-compression? ( >=sys-libs/zlib-1.2.8-r1[static-libs(+)?,-mgorny(-)] ) !<net-misc/openssh-8.0_p1-r3
 RESTRICT=!test? ( test )
-SLOT=0/3.5.3
-SRC_URI=https://github.com/openssl/openssl/tarball/1266c34f486ff9dc174785bb6ec9b02c8f688455 -> openssl-3.5.3-1266c34.tar.gz
+SLOT=0/3.6.0
+SRC_URI=https://github.com/openssl/openssl/tarball/f52b9f81a985dc1e45b28cd7b5671feb32815b83 -> openssl-3.6.0-f52b9f8.tar.gz
 _eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=bdebc2db719d99536792337e7413aa02
+_md5_=875b4ac37db83f5c4d6c2bd49b583e62
