@@ -25,6 +25,7 @@ brotlipy:
         body: |
           src_unpack() {
             unpack ${ROOT}/usr/share/brotli/bindings/brotli-python-${PV}.tar.gz || die
+            mv "${WORKDIR}"/Brotli-* "${S}"
           }
         extensions:
           - local-only
