@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=ssl? ( gnutls? ( >=net-libs/gnutls-3.7.2 ) openssl? ( >=dev-libs/openssl-1.1.1 ) )
 REQUIRED_USE=ssl? ( || ( gnutls openssl ) )
 SLOT=0/0
-SRC_URI=https://github.com/ngtcp2/ngtcp2/releases/download/v1.16.0/ngtcp2-1.16.0.tar.xz -> ngtcp2-1.16.0.tar.xz
-_md5_=49345efb1db2a33566949a05beb6020f
+SRC_URI=https://github.com/ngtcp2/ngtcp2/releases/download/v1.17.0/ngtcp2-1.17.0.tar.xz -> ngtcp2-1.17.0.tar.xz
+_md5_=ad01f0c187396dc989997491534efda3
