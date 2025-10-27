@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Utility to manage compilers"
 HOMEPAGE="https://github.com/gentoo/gcc-config"
-SRC_URI="https://github.com/gentoo/gcc-config/tarball/7933c4262ceb0ee44a72880a0f05aa7dc4bbe6f5 -> gcc-config-2.12.1-7933c42.tar.gz"
+SRC_URI="https://github.com/gentoo/gcc-config/tarball/94e1da124cc8a5cf461eb5cc148fa1d429ff3ac0 -> gcc-config-2.12.2-94e1da1.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="*"
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=sys-apps/gentoo-functions-0.10"
 
-S="${WORKDIR}/gentoo-gcc-config-7933c42"
+S="${WORKDIR}/gentoo-gcc-config-94e1da1"
 
 src_compile() {
 	emake CC="$(tc-getCC)" \

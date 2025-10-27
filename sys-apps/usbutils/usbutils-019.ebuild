@@ -8,7 +8,7 @@ inherit meson python-single-r1
 DESCRIPTION="USB enumeration utilities"
 HOMEPAGE="https://www.kernel.org/pub/linux/utils/usb/usbutils/
 	https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils.git/"
-SRC_URI="https://github.com/gregkh/usbutils/tarball/cda6883cade6ec67671d0c7de61e70eb992509a9 -> usbutils-018-cda6883.tar.gz"
+SRC_URI="https://github.com/gregkh/usbutils/tarball/d0c76b601b4b3ab9b2ab2647d604a8e3cce6d666 -> usbutils-019-d0c76b6.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
