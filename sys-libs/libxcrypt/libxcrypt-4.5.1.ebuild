@@ -5,14 +5,14 @@ inherit eutils
 
 DESCRIPTION="A replacement for libcrypt with DES, MD5 and blowfish support"
 HOMEPAGE="https://github.com/besser82/libxcrypt"
-SRC_URI="https://github.com/besser82/libxcrypt/tarball/55ea777e8d567e5e86ffac917c28815ac54cc341 -> libxcrypt-4.4.38-55ea777.tar.gz"
+SRC_URI="https://github.com/besser82/libxcrypt/tarball/99da23588acc5986159acca85b97cb7b208e739f -> libxcrypt-4.5.1-99da235.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="*"
 IUSE=""
 
-S="${WORKDIR}/besser82-libxcrypt-55ea777"
+S="${WORKDIR}/besser82-libxcrypt-99da235"
 
 src_configure() {
     ./autogen.sh
