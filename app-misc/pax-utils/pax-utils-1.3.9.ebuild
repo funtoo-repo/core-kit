@@ -8,10 +8,10 @@ inherit python-single-r1 meson
 
 DESCRIPTION="ELF utils that can check files for security relevant properties"
 HOMEPAGE="https://github.com/gentoo/pax-utils"
-SRC_URI="https://github.com/gentoo/pax-utils/tarball/9ef54b472e42ba2c5479fbd86b8be2275724b064 -> pax-utils-1.3.8-9ef54b4.tar.gz"
+SRC_URI="https://github.com/gentoo/pax-utils/tarball/d5f280233ad5c824c085b92affc1d0f3fae5b167 -> pax-utils-1.3.9-d5f2802.tar.gz"
 LICENSE="GPL-2"
 
-S="${WORKDIR}/gentoo-pax-utils-9ef54b4"
+S="${WORKDIR}/gentoo-pax-utils-d5f2802"
 
 SLOT="0"
 KEYWORDS="*"
