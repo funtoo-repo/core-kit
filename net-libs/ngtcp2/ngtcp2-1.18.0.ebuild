@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION=""
 HOMEPAGE="hhttps://github.com/ngtcp2/ngtcp2"
-SRC_URI="https://github.com/ngtcp2/ngtcp2/releases/download/v1.17.0/ngtcp2-1.17.0.tar.xz -> ngtcp2-1.17.0.tar.xz"
+SRC_URI="https://github.com/ngtcp2/ngtcp2/releases/download/v1.18.0/ngtcp2-1.18.0.tar.xz -> ngtcp2-1.18.0.tar.xz"
 LICENSE="MIT"
 
 KEYWORDS="*"
