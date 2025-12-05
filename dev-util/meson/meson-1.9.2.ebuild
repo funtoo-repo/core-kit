@@ -8,14 +8,14 @@ inherit bash-completion-r1 distutils-r1 toolchain-funcs
 
 DESCRIPTION=""
 HOMEPAGE="https://mesonbuild.com/"
-SRC_URI="https://github.com/mesonbuild/meson/tarball/751b09390996163348612f0b106114256305ee40 -> meson-1.9.1-751b093.tar.gz"
+SRC_URI="https://github.com/mesonbuild/meson/tarball/d11b8f26f372c844fcd24a82fa745244bb13c6e0 -> meson-1.9.2-d11b8f2.tar.gz"
 LICENSE="Apache-2.0"
 
 KEYWORDS="*"
 
 SLOT="0"
 
-S="${WORKDIR}/mesonbuild-meson-751b093"
+S="${WORKDIR}/mesonbuild-meson-d11b8f2"
 
 python_install_all() {
 	distutils-r1_python_install_all

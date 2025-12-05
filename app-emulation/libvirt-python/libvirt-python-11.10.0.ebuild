@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="libvirt Python bindings"
 HOMEPAGE="https://www.libvirt.org"
-SRC_URI="https://github.com/libvirt/libvirt-python/tarball/0974ca9326f57a6c30a117fd09c5c6e0700083e8 -> libvirt-python-11.9.0-0974ca9.tar.gz"
+SRC_URI="https://github.com/libvirt/libvirt-python/tarball/4e4f3d9f7adc045afc5911e0e7bf835f6ccbcc7a -> libvirt-python-11.10.0-4e4f3d9.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
