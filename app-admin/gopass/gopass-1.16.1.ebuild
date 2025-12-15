@@ -289,8 +289,8 @@ go-module_set_globals
 
 DESCRIPTION="a simple but powerful password manager for the terminal"
 HOMEPAGE="https://www.gopass.pw/"
-SRC_URI="https://github.com/gopasspw/gopass/tarball/9d21aeba820693b6ab9c0b0e474dc07d0bf6241a -> gopass-1.16.0-9d21aeb.tar.gz
-https://direct-github.funmore.org/d8/20/9b/d8209b691a1c4e9de3ecb2a06053cea3d7ce90027bb83ea896d4f239db323fa8add04ae6756cf54dcfb567de13d61fb5cc4d4ee81c177017182fb8c16787b367 -> gopass-1.16.0-funtoo-go-bundle-6eb60102e49d0796f1c3c69b5d4cf30d0dcf01c913c7fcc764e43942f41643b8b3458edac0ed2fff6c520537bbfc44d002a50b5c62da410e8d073640243feb3d.tar.gz"
+SRC_URI="https://github.com/gopasspw/gopass/tarball/af3d1d15b8a98de4c7d38a1d17113dec5d854cb7 -> gopass-1.16.1-af3d1d1.tar.gz
+https://direct-github.funmore.org/93/04/67/93046763151f2539d926982766c4c5c06c707ea5308f29a4e376ca8a8c20addff697e53d6d6c96bf466b365f65c255420c9c07c4d391314a18b2a47c774df494 -> gopass-1.16.1-funtoo-go-bundle-6eb60102e49d0796f1c3c69b5d4cf30d0dcf01c913c7fcc764e43942f41643b8b3458edac0ed2fff6c520537bbfc44d002a50b5c62da410e8d073640243feb3d.tar.gz"
 
 LICENSE="MIT Apache-2.0 BSD MPL-2.0 BSD-2"
 SLOT="0"
